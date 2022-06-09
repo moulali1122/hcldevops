@@ -1,0 +1,8 @@
+version: "3.8"
+services:
+  moulaliapp1:
+   image: moulalihc1:appv1
+   build: .
+   container_name: moulalic111
+   ports:
+   - 1555:80
