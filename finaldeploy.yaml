@@ -24,3 +24,25 @@ spec:
         - containerPort: 80
         resources: {}
 status: {}
+
+
+
+
+
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app: moulalifinal-deploy
+  name: moulalilb1555
+spec:
+  ports:
+  - port: 80
+    protocol: TCP
+    targetPort: 80
+  selector:
+    app: moulalifinal-deploy
+  type: NodePort
+status:
+  loadBalancer: {}
