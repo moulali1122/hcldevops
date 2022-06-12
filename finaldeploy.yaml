@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: moulalifinal-deploy
+  name: moulalifinal-deploy
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: moulalifinal-deploy
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: moulalifinal-deploy
+    spec:
+      containers:
+      - image: moulali1122/moulalihcl:appfinal
+        name: moulalihcl
+        ports:
+        - containerPort: 80
+        resources: {}
+status: {}
